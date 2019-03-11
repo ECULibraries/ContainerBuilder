@@ -1,0 +1,10 @@
+INSERT INTO `ars_dev`.`top_container`(`repo_id`,`lock_version`,`json_schema_version`,`indicator`,`created_by`,`last_modified_by`,`create_time`,`system_mtime`,`user_mtime`,`type_id`,`created_for_collection`)
+VALUES(3, 0, 1, '1','admin','admin','2018-12-06','2018-12-06','2018-12-06',317,'/repositories/3/resources/800'); SET @topid = LAST_INSERT_ID();
+INSERT INTO `ars_dev`.`archival_object`(`lock_version`,`json_schema_version`,`repo_id`,`root_record_id`,`parent_id`,`parent_name`,`position`,`publish`,`ref_id`,`component_id`,`title`,`display_string`,`level_id`,`system_generated`,`restrictions_apply`,`created_by`,`last_modified_by`,`create_time`,`system_mtime`,`user_mtime`,`suppressed`)
+VALUES(0,1,3,800,NULL,'root@/repositories/3/resources/800',3,1,'0472-002-b1-fa-i1','0472-002-b1-fa-i1','Logbook of H.M.S Desperate','Logbook of H.M.S Desperate',892,0,0,'admin','admin','2018-12-06','2018-12-06','2018-12-06',0);SET @itemid = LAST_INSERT_ID();
+INSERT INTO `ars_dev`.`instance`(`lock_version`,`json_schema_version`,`archival_object_id`,`instance_type_id`,`created_by`,`last_modified_by`,`create_time`,`system_mtime`,`user_mtime`)
+VALUES(0, 1, @itemid,353,'admin','admin','2018-12-06','2018-12-06','2018-12-06'); SET @instanceid = LAST_INSERT_ID();
+INSERT INTO `ars_dev`.`sub_container`(`lock_version`,`json_schema_version`,`instance_id`,`type_2_id`,`indicator_2`,`created_by`,`last_modified_by`,`create_time`,`system_mtime`,`user_mtime`)
+VALUES(0, 1, @instanceid,320,'a','admin','admin','2018-12-06','2018-12-06','2018-12-06'); SET @subid = LAST_INSERT_ID();
+INSERT INTO `ars_dev`.`top_container_link_rlshp`(`top_container_id`,`sub_container_id`,`aspace_relationship_position`,`suppressed`,`system_mtime`,`user_mtime`)
+VALUES(@topid, @subid,0,0,'2018-12-06','2018-12-06');

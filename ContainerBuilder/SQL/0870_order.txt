@@ -1,0 +1,7 @@
+UPDATE ars_dev.archival_object SET position = 500 WHERE id = 329744;
+UPDATE ars_dev.archival_object SET position = 1500 WHERE id = 329745;
+UPDATE ars_dev.archival_object SET position = 2500 WHERE id = 329746;
+UPDATE ars_dev.archival_object SET position = 3500 WHERE id = 329747;
+UPDATE ars_dev.archival_object SET position = 4500 WHERE id = 329748;
+UPDATE ars_dev.archival_object SET position = 5500 WHERE id = 329749;
+UPDATE ars_dev.archival_object SET position = 6500 WHERE id = 329750;
